@@ -2,7 +2,7 @@
 SınavLab - Yapay Zekâ Destekli Kişiselleştirilmiş Sınav ve Öğrenme Platformu
 
 ## Takım logosu 
-<img src="sinavlab_logo.png" alt="SınavLab Logo" width="220"/>
+<img src="readme/sinavlab_logo.png" alt="SınavLab Logo" width="220"/>
 
 ## 👥 Takım Üyeleri
 
@@ -51,7 +51,7 @@ Board’daki işler:
 ⚙️ In Progress: Modüllerin detaylandırılması, proje akışı ve ekip içi roller üzerinde çalışmalar devam etmektedir.
 📝 To Do: Kod altyapısının kurulumu ve tasarım süreci Sprint 2’ye hazırlık amacıyla planlanmıştır.
 
-![sınavlab](sınavlab.png)
+![sınavlab](readme/sprint1.png)
 
 
 ### 🌟 Sprint Review
@@ -78,7 +78,7 @@ Sprint 2 kapsamında proje geliştirme sürecine geçilmiş, teknik altyapı kur
 
 ### 🛠 Backlog Durumu ve İşlerin İlerlemesi  
 
-![sprint2](sprint2.png)
+![sprint2](readme/sprint2.png)
 
 
 ### 🌟 Sprint Review  
