@@ -46,10 +46,6 @@ User Story'ler product backlog item'larının içine yazılmıştır ve her bir 
 
 ### 🛠 Backlog düzeni ve story seçimleri
 Backlog’ta yer alan işler bir sonraki sprintlerdeki yazılım geliştirme ve tasarım süreçlerinin temelini oluşturacak şekilde seçilmiştir.
-Board’daki işler:
-✅ Done: Ana hedef ve modül kararları, hedef kullanıcı, platform kararı, ilk backlog taslağı hazırlanmıştır.
-⚙️ In Progress: Modüllerin detaylandırılması, proje akışı ve ekip içi roller üzerinde çalışmalar devam etmektedir.
-📝 To Do: Kod altyapısının kurulumu ve tasarım süreci Sprint 2’ye hazırlık amacıyla planlanmıştır.
 
 ![sınavlab](readme/sprint1.png)
 
