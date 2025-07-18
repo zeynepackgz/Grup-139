@@ -2,7 +2,7 @@
 SınavLab - Yapay Zekâ Destekli Kişiselleştirilmiş Sınav ve Öğrenme Platformu
 
 ## Takım logosu 
-![logo](logo.png)
+![logo](sinavlab_logo.png)
 
 ## Takım Üyeleri
 * Ceylin Akgül- Product Owner, Developer
