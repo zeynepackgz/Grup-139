@@ -4,12 +4,16 @@ SınavLab - Yapay Zekâ Destekli Kişiselleştirilmiş Sınav ve Öğrenme Platf
 ## Takım logosu 
 <img src="sinavlab_logo.png" alt="SınavLab Logo" width="220"/>
 
-## Takım Üyeleri
-* Ceylin Akgül- Product Owner, Developer
-* Zeynep Açıkgöz- Scrum Master, Developer
-* Anas Eskander Mohammed Thabet Al-Maqtari- Developer
-* Rubina Erin- Developer
-* Yavuz Alp Beydoğan- Developer
+## 👥 Takım Üyeleri
+
+| İsim                                      | Rol                        |
+|-------------------------------------------|-----------------------------|
+| **Ceylin Akgül**                          | Product Owner, Developer   |
+| **Zeynep Açıkgöz**                        | Scrum Master, Developer    |
+| **Anas Eskander Mohammed Thabet Al-Maqtari** | Developer                |
+| **Rubina Erin**                           | Developer                  |
+| **Yavuz Alp Beydoğan**                    | Developer                  |
+
 
 ## Proje Açıklaması
 SınavLab, öğrencilere sınavlara hazırlık süreçlerinde kişisel eksiklerini tespit ederek, yapay zekâ destekli sınavlar ve çalışma planları sunmayı hedefler. Sadece sınav çözme değil, konuların kalıcı öğrenilmesini sağlayacak interaktif öğrenme yolları sunar.
