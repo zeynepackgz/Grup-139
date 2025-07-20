@@ -2,15 +2,15 @@ from fastapi import FastAPI
 
 from fastapi import FastAPI
 
-from backend.databse.db_connection import Base,engine
-from backend.routers import user_router
+from databse.db_connection import Base,engine
+from routers.user_router import router as user_router
 
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.include_router(user_router.router)
+app.include_router(user_router)
 
 @app.get("/")
 def home():
