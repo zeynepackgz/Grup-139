@@ -1,7 +1,8 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
 
-from sinavlab.backend.databse.db_connection import Base
+
+from sqlalchemy import Column, ForeignKey, Integer, String
+from backend.databse.db_connection import Base
+from sqlalchemy.orm import relationship
 
 class User(Base):
     __tablename__ = "users"

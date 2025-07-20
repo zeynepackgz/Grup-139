@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 
 from fastapi import FastAPI
-from sinavlab.backend.databse.db_connection import engine,Base
-from sinavlab.backend.routers import user_router
+
+from backend.databse.db_connection import Base,engine
+from backend.routers import user_router
+
 
 Base.metadata.create_all(bind=engine)
 

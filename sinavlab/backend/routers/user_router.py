@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from sinavlab.backend.databse.db_connection import get_db
-from sinavlab.backend.controllers import user_controller
-from sinavlab.backend.schemas.user import UserCreate
+from backend.databse.db_connection import get_db
+from backend.controllers import user_controller
+from backend.schemas.user import UserCreate
 
 
 router = APIRouter()

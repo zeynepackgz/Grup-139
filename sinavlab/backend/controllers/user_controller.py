@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
-from sinavlab.backend.models.user import User
-from sinavlab.backend.schemas.user import UserCreate
+from backend.models.user import User
+from backend.schemas.user import UserCreate
 
 
 def create_user(db: Session, user: UserCreate):
