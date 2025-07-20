@@ -10,11 +10,6 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, index=True, unique=True)
 
-class Class(Base):
-    __tablename__ = "classes"
-
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True, nullable=False, unique=True)
 
 class Students(Base):
     __tablename__ = "students"

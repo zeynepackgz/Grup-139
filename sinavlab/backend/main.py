@@ -4,13 +4,16 @@ from fastapi import FastAPI
 
 from databse.db_connection import Base,engine
 from routers.user_router import router as user_router
-
+from routers.class_router import router as class_router
+from routers.teachers import router as teachers
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
 app.include_router(user_router)
+app.include_router(class_router)
+app.include_router(teachers)
 
 @app.get("/")
 def home():
