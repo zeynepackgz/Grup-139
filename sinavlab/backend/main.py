@@ -1,19 +1,22 @@
 from fastapi import FastAPI
 
-from fastapi import FastAPI
 
 from databse.db_connection import Base,engine
-from routers.user_router import router as user_router
+# from routers.user_router import router as user_router
 from routers.class_router import router as class_router
 from routers.teachers import router as teachers
-
+from routers.student_router import router as student_router
+# Base.metadata.drop_all(bind=engine)
+from models.student_model import Student
+from models.class_model import Class
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.include_router(user_router)
+# app.include_router(user_router)
 app.include_router(class_router)
-app.include_router(teachers)
+# app.include_router(teachers)
+app.include_router(student_router)
 
 @app.get("/")
 def home():
