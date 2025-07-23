@@ -1,0 +1,10 @@
+{
+    "results": [
+        { "soru_id": "s001", "konu": "matematik-geometri", "cevap_dogru_mu": false, "zorluk": "orta" },
+        { "soru_id": "s002", "konu": "turkce-dilbilgisi", "cevap_dogru_mu": true, "zorluk": "kolay" },
+        { "soru_id": "s003", "konu": "matematik-geometri", "cevap_dogru_mu": false, "zorluk": "zor" },
+        { "soru_id": "s004", "konu": "fen-fizik", "cevap_dogru_mu": true, "zorluk": "orta" },
+        { "soru_id": "s005", "konu": "turkce-dilbilgisi", "cevap_dogru_mu": false, "zorluk": "orta" },
+        { "soru_id": "s006", "konu": "matematik-cebir", "cevap_dogru_mu": true, "zorluk": "kolay" }
+    ]
+}
