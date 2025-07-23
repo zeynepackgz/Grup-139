@@ -80,11 +80,7 @@ class PerformanceAnalyzer:
                 elif topic == "turkce-dilbilgisi":
                     suggestions.append("Dilbilgisi kurallarına ve yazım/noktalama işaretlerine odaklanın.")
 
-        # --- Model tabanlı öneriler (İsteğe bağlı - daha fazla veri ve model eğitimi gerektirir) ---
-        # Şu anki mock verinizle model eğitimi yapmak ve anlamlı tahminler elde etmek zor.
-        # Bu kısım daha büyük bir veri seti olduğunda anlam kazanacaktır.
-        # Örneğin: modeli kullanarak öğrencinin hangi tür sorularda yanlış yapma eğilimi olduğunu tahmin edip o konularda öneri sunabiliriz.
-
+   
         return {
             "weak_topics": weak_topics,
             "suggestions": suggestions,
