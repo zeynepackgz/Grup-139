@@ -1,0 +1,26 @@
+{
+  "notlar": {
+    "Matematik": 48,
+    "Fizik": 92,
+    "Kimya": 53,
+    "Biyoloji": 78
+  },
+  "kavramlar": {
+    "Matematik": {
+      "Denklemler": {
+        "podcast": "https://example.com/audio/denklemler.mp3",
+        "hikaye": "Ali denklemlerle boğuşurken bir formül buldu..."
+      },
+      "Fonksiyonlar": {
+        "podcast": "https://example.com/audio/fonksiyonlar.mp3",
+        "hikaye": "Fonksiyonlar, hayatın ta kendisiydi..."
+      }
+    },
+    "Kimya": {
+      "Asit-Baz": {
+        "podcast": "https://example.com/audio/asitbaz.mp3",
+        "hikaye": "Asitler ve bazlar kimya savaşında karşı karşıya geldi..."
+      }
+    }
+  }
+}
