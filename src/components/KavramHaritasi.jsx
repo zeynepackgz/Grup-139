@@ -1,9 +1,9 @@
 import React from "react";
+import PodcastOynatici from "./PodcastOynatici";
 
 function KavramHaritasi({ data }) {
   const { notlar, kavramlar } = data;
 
-  // 60'tan düşük notları filtrele
   const dusukNotluDersler = Object.keys(notlar).filter(
     (ders) => notlar[ders] < 60
   );
@@ -32,9 +32,7 @@ function KavramHaritasi({ data }) {
                 <li key={kavram}>
                   <strong>{kavram}</strong>
                   <br />
-                  <audio controls src={kavramlar[ders][kavram].podcast}>
-                    Podcast desteklenmiyor
-                  </audio>
+                  <PodcastOynatici src={kavramlar[ders][kavram].podcast} />
                   <p>{kavramlar[ders][kavram].hikaye}</p>
                 </li>
               ))}

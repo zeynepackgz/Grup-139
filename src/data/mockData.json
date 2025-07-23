@@ -8,17 +8,17 @@
   "kavramlar": {
     "Matematik": {
       "Denklemler": {
-        "podcast": "https://example.com/audio/denklemler.mp3",
+        "podcast": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         "hikaye": "Ali denklemlerle boğuşurken bir formül buldu..."
       },
       "Fonksiyonlar": {
-        "podcast": "https://example.com/audio/fonksiyonlar.mp3",
+        "podcast": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
         "hikaye": "Fonksiyonlar, hayatın ta kendisiydi..."
       }
     },
     "Kimya": {
       "Asit-Baz": {
-        "podcast": "https://example.com/audio/asitbaz.mp3",
+        "podcast": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
         "hikaye": "Asitler ve bazlar kimya savaşında karşı karşıya geldi..."
       }
     }
