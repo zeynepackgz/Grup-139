@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Takım ismi 
 SınavLab - Yapay Zekâ Destekli Kişiselleştirilmiş Sınav ve Öğrenme Platformu
 
@@ -110,3 +111,22 @@ Sprint 2 sonunda proje canlıya taşınmış, ilk çalışan sürüm elde edilmi
 - Sprint sonunda proje ilk kez **canlı ortama taşınmış** ve çalışan bir prototip elde edilmiştir.  
 - Ekip görevlerini zamanında ve etkili bir şekilde yerine getirmiştir.  
 - Sprint 3 için hedef: kullanıcı testlerini tamamlayarak arayüz ve deneyim geliştirmelerine odaklanmaktır.
+=======
+# SınavLab – Kavram Haritası Modülü
+
+Bu modül, sınavlarda düşük başarı gösterilen derslere göre otomatik olarak kavram haritası üretir.  
+Ayrıca her kavram için podcast oynatıcı ve hikayeleştirilmiş içerik sunar.
+
+## Kullanılan Teknolojiler
+
+- React.js
+- HTML5 `<audio>` oynatıcı
+- JSON mock veri (backend entegrasyonu hazır)
+- Vite / Create React App (Bu projede CRA kullanıldı)
+
+## Geliştirme
+
+```bash
+npm install
+npm start
+>>>>>>> kavram-haritasi
