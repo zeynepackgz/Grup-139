@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import json
+from typing import List
+from pydantic import BaseModel
 from pathlib import Path
+import json
 
 app = FastAPI()
 
@@ -9,16 +11,23 @@ app = FastAPI()
 def home():
     return {"home endpoint"}
 
-# Yeni: Bilgi kartları endpoint’i
-@app.get("/api/bilgi-kartlari")
+
+# Pydantic modeli — JSON'daki alanlara göre
+class BilgiKart(BaseModel):
+    id: int
+    title: str
+    description: str
+    
+#bilgi kart endpoint
+@app.get("/api/bilgi-kartlari", response_model=List[BilgiKart])
 def get_bilgi_kartlari():
     dosya_yolu = Path("data/bilgi-kart.json")
     if dosya_yolu.exists():
         with open(dosya_yolu, "r", encoding="utf-8") as f:
             kartlar = json.load(f)
-        return {"data": kartlar}
+        return kartlar
     else:
-        return {"data": [], "message": "Bilgi kartı dosyası bulunamadı"}
+        return []
 
 
 if __name__ == "__main__":
