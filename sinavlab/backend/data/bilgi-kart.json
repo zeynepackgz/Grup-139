@@ -1,1 +1,53 @@
+[
+  {
+    "id": 1,
+    "title": "Matematik - Fonksiyonlar",
+    "description": "Fonksiyonlar, her girdiye bir çıktı atayan matematiksel ilişkilerdir."
+  },
+  {
+    "id": 2,
+    "title": "Matematik - Türev",
+    "description": "Türev, bir fonksiyonun değişim hızını ifade eder. Eğrinin eğimiyle ilgilidir."
+  },
+  {
+    "id": 3,
+    "title": "Fizik - Newton’un Hareket Yasaları",
+    "description": "Bir cismin hareketini açıklayan üç temel yasadır. Kuvvet, kütle ve ivme arasındaki ilişkiyi kapsar."
+  },
+  {
+    "id": 4,
+    "title": "Fizik - Enerji Türleri",
+    "description": "Kinetik enerji, potansiyel enerji, ısı enerjisi gibi farklı enerji türleri vardır."
+  },
+  {
+    "id": 5,
+    "title": "Kimya - Periyodik Tablo",
+    "description": "Elementler, artan atom numarasına göre sıralanır. Gruplar ve periyotlar bilgi verir."
+  },
+  {
+    "id": 6,
+    "title": "Kimya - Asit Baz Teorileri",
+    "description": "Bronsted-Lowry teorisine göre asitler proton verici, bazlar proton alıcıdır."
+  },
+  {
+    "id": 7,
+    "title": "Biyoloji - Hücre Yapısı",
+    "description": "Hücre; çekirdek, sitoplazma ve organellerden oluşur. Canlıların temel birimidir."
+  },
+  {
+    "id": 8,
+    "title": "Biyoloji - DNA ve Genetik",
+    "description": "DNA, kalıtsal bilgiyi taşıyan çift sarmallı bir moleküldür. Genetik bilgiyi aktarır."
+  },
+  {
+    "id": 9,
+    "title": "Coğrafya - İklim Tipleri",
+    "description": "Ekvatoral, muson, karasal gibi iklim tipleri; sıcaklık ve yağışa göre sınıflandırılır."
+  },
+  {
+    "id": 10,
+    "title": "Tarih - Sanayi Devrimi",
+    "description": "18. yüzyılda başlayan bu süreç, üretimin makineleşmesini ve toplumsal değişimi tetikledi."
+  }
+]
 
