@@ -12,7 +12,7 @@ def home():
 # Yeni: Bilgi kartları endpoint’i
 @app.get("/api/bilgi-kartlari")
 def get_bilgi_kartlari():
-    dosya_yolu = Path("sinavlab/backend/data/bilgi-kart.json")
+    dosya_yolu = Path("data/bilgi-kart.json")
     if dosya_yolu.exists():
         with open(dosya_yolu, "r", encoding="utf-8") as f:
             kartlar = json.load(f)
