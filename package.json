@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "postgres_sinavlab",
   "version": "1.0.0",
   "main": "index.js",
@@ -16,7 +15,7 @@
     "express": "^5.1.0",
     "pg": "^8.16.3",
     "sequelize": "^6.37.7"
-=======
+
   "name": "sinavlab-kavrammodulu",
   "version": "0.1.0",
   "private": true,
@@ -60,6 +59,6 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
->>>>>>> kavram-haritasi
+
   }
 }
