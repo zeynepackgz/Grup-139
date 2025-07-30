@@ -11,6 +11,7 @@ from models.student_model import Student
 from models.class_model import Class
 from routers.course_router import router as course_router
 Base.metadata.create_all(bind=engine)
+from routers.grade_router import router as grade_router
 
 app = FastAPI()
 
@@ -20,7 +21,7 @@ app.include_router(class_router)
 app.include_router(student_router)
 # app.include_router(courses)
 app.include_router(course_router)
-
+app.include_router(grade_router)
 
 @app.get("/")
 def home():
@@ -31,3 +32,6 @@ def home():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+class Config:
+    from_attributes = True

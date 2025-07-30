@@ -12,3 +12,4 @@ class Course(Base):
     classes = relationship("Class", secondary=class_courses, back_populates="courses")
     students = relationship("Student", secondary=student_courses, back_populates="courses")
 
+    grades = relationship("Grade", back_populates="course")

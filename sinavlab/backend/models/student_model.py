@@ -23,5 +23,6 @@ class Student(Base):
     courses = relationship(
         "Course",
         secondary="student_courses",  # Association table adı
-        back_populates="students"
-    )
+    back_populates="students"
+)
+    grades = relationship("Grade", back_populates="student")
