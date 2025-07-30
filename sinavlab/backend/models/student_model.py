@@ -15,6 +15,7 @@ class Student(Base):
     address = Column(String, nullable=True)
     phone_number = Column(String, nullable=True)
     email = Column(String, unique=True, nullable=True)
+    password = Column(String)
 
     class_id = Column(Integer, ForeignKey("class.id", ondelete="CASCADE"), nullable=False)
     class_info = relationship("Class", back_populates="students") 

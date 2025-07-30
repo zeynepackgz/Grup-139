@@ -5,7 +5,7 @@ from databse.db_connection import Base
 class Grade(Base):
     __tablename__ = "grades"
     id = Column(Integer, primary_key=True, index=True)
-    student_id = Column(Integer, ForeignKey("students.id"))
+    student_id = Column(Integer, ForeignKey("student.id"))
     course_id = Column(Integer, ForeignKey("courses.id"))
     value = Column(Float, nullable=False)
 

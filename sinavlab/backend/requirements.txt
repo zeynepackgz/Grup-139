@@ -3,3 +3,4 @@ uvicorn
 sqlalchemy 
 psycopg2-binary
 dotenv
+alembic==1.13.2

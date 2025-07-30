@@ -12,6 +12,7 @@ class StudentCreate(BaseModel):
     phone_number: Optional[str] = None
     email: Optional[str] = None
     class_name: str  # onemli (hangi class a ait oldugu bilgisi daha sonra class ismine gore id alinacak ve eklenecek)
+    password:str
 
 
 class StudentUpdate(BaseModel):
@@ -24,3 +25,4 @@ class StudentUpdate(BaseModel):
     phone_number: Optional[str] = None
     email: Optional[str] = None
     class_name: Optional[str] = None  # kayitli oldugu class da degistirilebilir
+    password:str

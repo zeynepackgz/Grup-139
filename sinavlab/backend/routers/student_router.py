@@ -35,7 +35,8 @@ async def add_student(student_data: StudentCreate, db: Session = Depends(get_db)
         address=student_data.address,
         phone_number=student_data.phone_number,
         email=student_data.email,
-        class_id=db_class.id 
+        class_id=db_class.id ,
+        password = student_data.password
     )
 
     db.add(new_student)
@@ -72,7 +73,12 @@ async def update_student_by_id(student_id: int, student_data: StudentUpdate, db:
         if not db_class:
             raise HTTPException(status_code=404, detail="New class not found")
         db_student.class_id = db_class.id
-
+    # email baska ogrenciden alinmis mi kontrol et
+    if student_data.email is not None:
+        existing_student = db.query(Student).filter(Student.email == student_data.email, Student.id != student_id).first()
+        if existing_student:
+            raise HTTPException(status_code=400, detail="Email already in use by another student")
+        db_student.email = student_data.email
     if student_data.first_name is not None:
         db_student.first_name = student_data.first_name
     if student_data.last_name is not None:
@@ -85,8 +91,8 @@ async def update_student_by_id(student_id: int, student_data: StudentUpdate, db:
         db_student.address = student_data.address
     if student_data.phone_number is not None:
         db_student.phone_number = student_data.phone_number
-    if student_data.email is not None:
-        db_student.email = student_data.email
+    
+
 
     db.commit()
     db.refresh(db_student)
