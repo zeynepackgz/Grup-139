@@ -61,9 +61,6 @@ async def delete_student_by_id(student_id: int, db: Session = Depends(get_db)):
 
     return {"message": f"Student with ID {student_id} deleted successfully"}
 
-
-
-
 @router.put("/{student_id}", status_code=status.HTTP_200_OK)
 async def update_student_by_id(student_id: int, student_data: StudentUpdate, db: Session = Depends(get_db)):
     db_student = db.query(Student).filter(Student.id == student_id).first()
@@ -122,3 +119,28 @@ async def get_all_students(db: Session = Depends(get_db)):
         })
 
     return {"students": result}
+
+@router.get("/{student_id}/courses")
+def get_courses_from_student(
+    student_id: int,
+    db: Session = Depends(get_db)
+):
+    student = db.query(Student).filter(Student.id == student_id).first()
+    if not student:
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    class_courses = student.class_info.courses if student.class_info else []
+
+    return {
+        "student_id": student.id,
+        "class_id": student.class_info.id if student.class_info else None,
+        "courses": [
+            {
+                "id": course.id,
+                "name": course.name,
+                "description": course.description
+            }
+            for course in class_courses
+        ]
+    }
+

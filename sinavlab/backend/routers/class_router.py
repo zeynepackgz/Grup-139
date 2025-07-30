@@ -5,6 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import Column, Integer, String
 from pydantic import BaseModel
 
+from models.student_model import Student
 from models.class_model import Class
 from databse.db_connection import get_db
 from schemas.class_schema import ClassCreate, ClassUpdate
@@ -90,3 +91,39 @@ async def delete_class(
     db.commit()
 
     return {"message": f"Class with id {class_id} deleted successfully"}
+
+@router.get("/{student_id}/class")
+def get_student_class(
+    student_id: int,
+    db: Session = Depends(get_db)
+):
+    student = db.query(Student).filter(Student.id == student_id).first()
+    if not student:
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    class_info = student.class_info
+    if not class_info:
+        return {"message": "Student is not assigned to a class"}
+
+    return {
+        "class_id": class_info.id,
+        "class_name": class_info.name
+    }
+
+
+
+
+@router.get("/{class_id}/courses")
+def get_courses_for_class(class_id: int, db: Session = Depends(get_db)):
+    class_obj = db.query(Class).filter(Class.id == class_id).first()
+    if not class_obj:
+        raise HTTPException(status_code=404, detail="Class not found")
+
+    return {
+        "class_id": class_obj.id,
+        "class_name": class_obj.name,
+        "courses": [
+            {"id": c.id, "name": c.name, "description": c.description}
+            for c in class_obj.courses
+        ]
+    }

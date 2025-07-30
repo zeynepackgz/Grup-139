@@ -1,6 +1,7 @@
 from sqlalchemy import Column, ForeignKey, Integer, String, Date
 from databse.db_connection import Base
 from sqlalchemy.orm import relationship
+from models.association_tables import student_courses
 
 class Student(Base):
     __tablename__ = "student"  

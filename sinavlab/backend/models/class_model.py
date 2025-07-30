@@ -1,11 +1,13 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
-from databse.db_connection import Base
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
+from models.course_model import Course
+from models.association_tables import class_courses
+from databse.db_connection import Base
 
 class Class(Base):
-    __tablename__ = "class"  
+    __tablename__ = "class"
+    id = Column(Integer, primary_key=True)
+    name = Column(String, unique=True)
 
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
-    name = Column(String, index=True, nullable=False, unique=True) 
-
-    students = relationship("Student", back_populates="class_info", cascade="all, delete", passive_deletes=True)
+    students = relationship("Student", back_populates="class_info")
+    courses = relationship("Course", secondary=class_courses, back_populates="classes")
