@@ -22,18 +22,24 @@ def protected_student(token: str = Depends(oauth2_scheme)):
 
 
 class StudentLoginRequest(BaseModel):
-    student_number: str
-    first_name: str
-    last_name: str
+    email: str
+    password: str
+
 
 @router.post("/login")
 def student_login(request: StudentLoginRequest, db: Session = Depends(get_db)):
+    print("request.email ==>"+request.email)
+    print("request.password ==>"+request.password)
+    students = db.query(Student).all()
+    for s in students:
+        print("DB Email:", s.email)
     student = db.query(Student).filter(
-        Student.student_number == request.student_number,
-        Student.first_name == request.first_name,
-        Student.last_name == request.last_name
+        Student.email == request.email,
+        Student.password == request.password,
     ).first()
+    print("Öğrenci bulundu mu?:", student)
+
     if not student:
-        raise HTTPException(status_code=401, detail="Geçersiz öğrenci bilgileri")
-    token = create_access_token(data={"sub": student.student_number})
+        raise HTTPException(status_code=401, detail="Yanlış şifre veye mail!")
+    token = create_access_token(data={"sub": student.id,"emil":student.email})
     return {"access_token": token, "token_type": "bearer"}
