@@ -127,3 +127,23 @@ def get_courses_for_class(class_id: int, db: Session = Depends(get_db)):
             for c in class_obj.courses
         ]
     }
+@router.get("/{class_id}/students")
+def get_students_in_class(class_id: int, db: Session = Depends(get_db)):
+    class_obj = db.query(Class).filter(Class.id == class_id).first()
+    
+    if not class_obj:
+        raise HTTPException(status_code=404, detail="Class not found")
+
+    return {
+        "class_id": class_obj.id,
+        "class_name": class_obj.name,
+        "students": [
+            {
+                "id": student.id,
+                "first_name": student.first_name,
+                "last_name": student.last_name,
+                "email": student.email
+            }
+            for student in class_obj.students
+        ]
+    }
