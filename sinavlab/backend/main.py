@@ -9,6 +9,7 @@ from routers.student_router import router as student_router
 # Base.metadata.drop_all(bind=engine)
 from models.student_model import Student
 from models.class_model import Class
+from routers.course_router import router as course_router
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
@@ -17,6 +18,9 @@ app = FastAPI()
 app.include_router(class_router)
 # app.include_router(teachers)
 app.include_router(student_router)
+# app.include_router(courses)
+app.include_router(course_router)
+
 
 @app.get("/")
 def home():

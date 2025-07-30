@@ -18,4 +18,9 @@ class Student(Base):
     class_id = Column(Integer, ForeignKey("class.id", ondelete="CASCADE"), nullable=False)
     class_info = relationship("Class", back_populates="students") 
 
-
+    # Ders ilişkisi (çoktan çoğa)
+    courses = relationship(
+        "Course",
+        secondary="student_courses",  # Association table adı
+        back_populates="students"
+    )
