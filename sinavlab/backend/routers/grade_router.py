@@ -19,6 +19,13 @@ class GradeOut(GradeCreate):
 
 @router.post("/", response_model=GradeOut)
 def add_grade(grade: GradeCreate, db: Session = Depends(get_db)):
+    # Aynı öğrenci ve ders için not var mı kontrol et
+    existing_grade = db.query(Grade).filter(
+        Grade.student_id == grade.student_id,
+        Grade.course_id == grade.course_id
+    ).first()
+    if existing_grade:
+        raise HTTPException(status_code=400, detail="Bu öğrenci için bu derste zaten bir not var.")
     db_grade = Grade(**grade.dict())
     db.add(db_grade)
     db.commit()

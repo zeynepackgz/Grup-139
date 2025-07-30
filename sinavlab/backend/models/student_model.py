@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from models.association_tables import student_courses
 
 class Student(Base):
-    __tablename__ = "student"  
+    __tablename__ = "students"  
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)  
     student_number = Column(String, unique=True, nullable=False)  

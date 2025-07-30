@@ -15,6 +15,9 @@ Base.metadata.create_all(bind=engine)
 from routers.grade_router import router as grade_router
 
 app = FastAPI()
+from routers.student_auth import router as student_auth_router
+app.include_router(student_auth_router)
+
 
 # app.include_router(user_router)
 app.include_router(class_router)

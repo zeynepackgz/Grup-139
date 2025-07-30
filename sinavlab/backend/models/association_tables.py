@@ -11,6 +11,6 @@ class_courses = Table(
 student_courses = Table(
     'student_courses',
     Base.metadata,
-    Column('student_id', Integer, ForeignKey('student.id')),
+    Column('student_id', Integer, ForeignKey('students.id')),
     Column('course_id', Integer, ForeignKey('courses.id'))
 )
