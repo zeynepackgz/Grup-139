@@ -41,5 +41,5 @@ def student_login(request: StudentLoginRequest, db: Session = Depends(get_db)):
 
     if not student:
         raise HTTPException(status_code=401, detail="Yanlış şifre veye mail!")
-    token = create_access_token(data={"sub": student.id,"emil":student.email})
+    token = create_access_token(data={"sub": student.id,"email": student.email})
     return {"access_token": token, "token_type": "bearer"}
