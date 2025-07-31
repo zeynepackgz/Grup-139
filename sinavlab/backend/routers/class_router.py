@@ -9,6 +9,7 @@ from models.student_model import Student
 from models.class_model import Class
 from databse.db_connection import get_db
 from schemas.class_schema import ClassCreate, ClassUpdate
+from auth import decode_access_token,oauth2_scheme
 
 
 # Router setup
@@ -92,11 +93,14 @@ async def delete_class(
 
     return {"message": f"Class with id {class_id} deleted successfully"}
 
-@router.get("/{student_id}/class")
+@router.get("/userClasses")
 def get_student_class(
-    student_id: int,
-    db: Session = Depends(get_db)
+    
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
 ):
+    payload = decode_access_token(token=token)
+    student_id = payload.get("id")
     student = db.query(Student).filter(Student.id == student_id).first()
     if not student:
         raise HTTPException(status_code=404, detail="Student not found")
@@ -109,9 +113,6 @@ def get_student_class(
         "class_id": class_info.id,
         "class_name": class_info.name
     }
-
-
-
 
 @router.get("/{class_id}/courses")
 def get_courses_for_class(class_id: int, db: Session = Depends(get_db)):
