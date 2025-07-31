@@ -1,1 +1,716 @@
+{
+  "matematik": {
+    "flashcards": [
+      { "id": 1, "question": "İntegral nedir?", "answer": "Bir fonksiyonun altında kalan alanı hesaplayan işlemdir." },
+      { "id": 2, "question": "Türev nasıl hesaplanır?", "answer": "Limit kullanılarak fonksiyonun değişim hızı bulunur." },
+      { "id": 3, "question": "Pi sayısı yaklaşık kaçtır?", "answer": "3.14159" },
+      { "id": 4, "question": "Bir üçgenin iç açılarının toplamı kaçtır?", "answer": "180 derece" },
+      { "id": 5, "question": "Eşitlikte bilinmeyeni bulmaya ne denir?", "answer": "Denklem çözme" },
+      { "id": 6, "question": "Dizideki terim sayısına ne denir?", "answer": "Eleman sayısı" },
+      { "id": 7, "question": "Bir sayının karesi ne demektir?", "answer": "Sayının kendisi ile çarpılması" },
+      { "id": 8, "question": "Fonksiyon nedir?", "answer": "Her girdiye bir çıktı eşleyen ilişki" },
+      { "id": 9, "question": "Doğrusal denklem nasıl yazılır?", "answer": "y = mx + b" },
+      { "id": 10, "question": "Permütasyon nedir?", "answer": "Sıralama ile ilgili kombinasyon çeşidi" }
+    ],
+    "keywords": [
+      {
+        "id": 1,
+        "question": "Limit nedir?",
+        "options": ["Bir fonksiyonun değerine yaklaşması", "Sonsuzluk", "Çarpma işlemi", "Toplama işlemi"],
+        "answer": "Bir fonksiyonun değerine yaklaşması"
+      },
+      {
+        "id": 2,
+        "question": "Türev hangi alanda kullanılır?",
+        "options": ["Değişim hızı", "Alan hesaplama", "Toplama", "Çarpma"],
+        "answer": "Değişim hızı"
+      },
+      {
+        "id": 3,
+        "question": "Pi sayısı kaçtır?",
+        "options": ["3.14", "2.17", "4.13", "1.61"],
+        "answer": "3.14"
+      },
+      {
+        "id": 4,
+        "question": "Bir üçgenin iç açıları toplamı?",
+        "options": ["180°", "90°", "360°", "270°"],
+        "answer": "180°"
+      },
+      {
+        "id": 5,
+        "question": "Denklem çözme nedir?",
+        "options": ["Bilinmeyeni bulma", "Toplama", "Çıkarma", "Çarpma"],
+        "answer": "Bilinmeyeni bulma"
+      },
+      {
+        "id": 6,
+        "question": "Dizideki eleman sayısı ne demek?",
+        "options": ["Terim sayısı", "Değişken sayısı", "Fonksiyon sayısı", "Limit sayısı"],
+        "answer": "Terim sayısı"
+      },
+      {
+        "id": 7,
+        "question": "Fonksiyon nedir?",
+        "options": ["Girdi-çıktı ilişkisi", "Toplama işlemi", "Bölme işlemi", "Çarpma işlemi"],
+        "answer": "Girdi-çıktı ilişkisi"
+      },
+      {
+        "id": 8,
+        "question": "Doğrusal denklem formu nedir?",
+        "options": ["y=mx+b", "ax^2+bx+c", "sin(x)", "log(x)"],
+        "answer": "y=mx+b"
+      },
+      {
+        "id": 9,
+        "question": "Permütasyon nedir?",
+        "options": ["Sıralama", "Toplama", "Çarpma", "Çıkarma"],
+        "answer": "Sıralama"
+      },
+      {
+        "id": 10,
+        "question": "İntegral ne için kullanılır?",
+        "options": ["Alan hesaplama", "Hız hesaplama", "Toplama", "Çarpma"],
+        "answer": "Alan hesaplama"
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "2 + 2 kaçtır?",
+        "options": ["3", "4", "5", "6"],
+        "answer": "4"
+      },
+      {
+        "id": 2,
+        "question": "Bir üçgenin iç açıları toplamı kaçtır?",
+        "options": ["180", "90", "360", "270"],
+        "answer": "180"
+      },
+      {
+        "id": 3,
+        "question": "Pi sayısı yaklaşık olarak nedir?",
+        "options": ["3.14", "2.71", "1.61", "1.41"],
+        "answer": "3.14"
+      },
+      {
+        "id": 4,
+        "question": "Türev işlemi neyi ifade eder?",
+        "options": ["Değişim hızı", "Alan", "Uzunluk", "Hacim"],
+        "answer": "Değişim hızı"
+      },
+      {
+        "id": 5,
+        "question": "Denklem çözmede amaç nedir?",
+        "options": ["Bilinmeyeni bulmak", "Çarpmak", "Bölmek", "Toplamak"],
+        "answer": "Bilinmeyeni bulmak"
+      },
+      {
+        "id": 6,
+        "question": "Permütasyon ne ile ilgilidir?",
+        "options": ["Sıralama", "Toplama", "Çarpma", "Bölme"],
+        "answer": "Sıralama"
+      },
+      {
+        "id": 7,
+        "question": "Fonksiyon nedir?",
+        "options": ["Girdi-çıktı ilişkisi", "Toplama", "Bölme", "Çarpma"],
+        "answer": "Girdi-çıktı ilişkisi"
+      },
+      {
+        "id": 8,
+        "question": "Doğrusal denklemin formu nedir?",
+        "options": ["y=mx+b", "ax^2+bx+c", "sinx", "cosx"],
+        "answer": "y=mx+b"
+      },
+      {
+        "id": 9,
+        "question": "İntegral ne için kullanılır?",
+        "options": ["Alan hesaplama", "Hacim hesaplama", "Uzunluk", "Sıcaklık"],
+        "answer": "Alan hesaplama"
+      },
+      {
+        "id": 10,
+        "question": "Bir sayının karesi nedir?",
+        "options": ["Sayının kendisiyle çarpımı", "Sayının yarısı", "Sayının iki katı", "Sayının kökü"],
+        "answer": "Sayının kendisiyle çarpımı"
+      }
+    ]
+  },
 
+  "fizik": {
+    "flashcards": [
+      { "id": 1, "question": "Newton’un birinci yasası nedir?", "answer": "Eylemsizlik yasasıdır." },
+      { "id": 2, "question": "Hız nasıl tanımlanır?", "answer": "Bir cismin birim zamandaki yer değiştirmesi." },
+      { "id": 3, "question": "Enerji nedir?", "answer": "İş yapabilme kapasitesidir." },
+      { "id": 4, "question": "Kuvvet birimi nedir?", "answer": "Newton (N)." },
+      { "id": 5, "question": "Basınç nasıl hesaplanır?", "answer": "Kuvvet bölü alan." },
+      { "id": 6, "question": "Işık hızı nedir?", "answer": "Yaklaşık 300.000 km/s." },
+      { "id": 7, "question": "Elektrik akımı birimi nedir?", "answer": "Amper (A)." },
+      { "id": 8, "question": "Termodinamik nedir?", "answer": "Isı ve enerji dönüşümü bilimidir." },
+      { "id": 9, "question": "Potansiyel enerji nedir?", "answer": "Konumdan dolayı sahip olunan enerji." },
+      { "id": 10, "question": "Kinetik enerji nedir?", "answer": "Hareketten dolayı sahip olunan enerji." }
+    ],
+    "keywords": [
+      {
+        "id": 1,
+        "question": "Hız nedir?",
+        "options": ["Yol/zaman", "Kütle", "Enerji", "Güç"],
+        "answer": "Yol/zaman"
+      },
+      {
+        "id": 2,
+        "question": "Kuvvet birimi nedir?",
+        "options": ["Newton", "Joule", "Watt", "Ampere"],
+        "answer": "Newton"
+      },
+      {
+        "id": 3,
+        "question": "Işık hızı yaklaşık kaçtır?",
+        "options": ["300.000 km/s", "150.000 km/s", "1.000 km/s", "30.000 km/s"],
+        "answer": "300.000 km/s"
+      },
+      {
+        "id": 4,
+        "question": "Enerji nedir?",
+        "options": ["İş yapabilme kapasitesi", "Kütle", "Hacim", "Basınç"],
+        "answer": "İş yapabilme kapasitesi"
+      },
+      {
+        "id": 5,
+        "question": "Elektrik akımı birimi?",
+        "options": ["Amper", "Newton", "Joule", "Watt"],
+        "answer": "Amper"
+      },
+      {
+        "id": 6,
+        "question": "Termodinamik neyi inceler?",
+        "options": ["Isı ve enerji dönüşümü", "Hareket", "Ses", "Işık"],
+        "answer": "Isı ve enerji dönüşümü"
+      },
+      {
+        "id": 7,
+        "question": "Basınç nasıl hesaplanır?",
+        "options": ["Kuvvet/Alan", "Enerji/Zaman", "Güç/Kütle", "Yol/Zaman"],
+        "answer": "Kuvvet/Alan"
+      },
+      {
+        "id": 8,
+        "question": "Potansiyel enerji nedir?",
+        "options": ["Konumdan kaynaklanan enerji", "Hareket enerjisi", "Isı", "Işık"],
+        "answer": "Konumdan kaynaklanan enerji"
+      },
+      {
+        "id": 9,
+        "question": "Kinetik enerji nedir?",
+        "options": ["Hareket enerjisi", "Isı enerjisi", "Potansiyel enerji", "Ses enerjisi"],
+        "answer": "Hareket enerjisi"
+      },
+      {
+        "id": 10,
+        "question": "Newton’un birinci yasası nedir?",
+        "options": ["Eylemsizlik yasası", "Hız yasası", "Enerji korunumu", "Basınç yasası"],
+        "answer": "Eylemsizlik yasası"
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "Newton’un birinci yasası nedir?",
+        "options": ["Eylemsizlik yasası", "Kuvvet yasası", "Hareket yasası", "Enerji yasası"],
+        "answer": "Eylemsizlik yasası"
+      },
+      {
+        "id": 2,
+        "question": "Hız nasıl tanımlanır?",
+        "options": ["Yer değiştirme/hız", "Zaman/yol", "Enerji", "Kuvvet"],
+        "answer": "Yer değiştirme/hız"
+      },
+      {
+        "id": 3,
+        "question": "Işık hızı nedir?",
+        "options": ["300.000 km/s", "150.000 km/s", "1.000 km/s", "30.000 km/s"],
+        "answer": "300.000 km/s"
+      },
+      {
+        "id": 4,
+        "question": "Basınç nasıl hesaplanır?",
+        "options": ["Kuvvet/Alan", "Enerji/Zaman", "Güç/Kütle", "Yol/Zaman"],
+        "answer": "Kuvvet/Alan"
+      },
+      {
+        "id": 5,
+        "question": "Elektrik akımı birimi nedir?",
+        "options": ["Amper", "Newton", "Joule", "Watt"],
+        "answer": "Amper"
+      },
+      {
+        "id": 6,
+        "question": "Enerji nedir?",
+        "options": ["İş yapabilme kapasitesi", "Kütle", "Hacim", "Basınç"],
+        "answer": "İş yapabilme kapasitesi"
+      },
+      {
+        "id": 7,
+        "question": "Kinetik enerji nedir?",
+        "options": ["Hareket enerjisi", "Isı enerjisi", "Potansiyel enerji", "Ses enerjisi"],
+        "answer": "Hareket enerjisi"
+      },
+      {
+        "id": 8,
+        "question": "Termodinamik neyi inceler?",
+        "options": ["Isı ve enerji dönüşümü", "Hareket", "Ses", "Işık"],
+        "answer": "Isı ve enerji dönüşümü"
+      },
+      {
+        "id": 9,
+        "question": "Potansiyel enerji nedir?",
+        "options": ["Konumdan kaynaklanan enerji", "Hareket enerjisi", "Isı", "Işık"],
+        "answer": "Konumdan kaynaklanan enerji"
+      },
+      {
+        "id": 10,
+        "question": "Newton’un ikinci yasası nedir?",
+        "options": ["F=ma", "E=mc²", "P=mv", "V=IR"],
+        "answer": "F=ma"
+      }
+    ]
+  },
+
+  "kimya": {
+    "flashcards": [
+      { "id": 1, "question": "Atom nedir?", "answer": "Maddenin en küçük yapı taşıdır." },
+      { "id": 2, "question": "Periyodik tablo nedir?", "answer": "Elementlerin sınıflandırıldığı tablodur." },
+      { "id": 3, "question": "Molekül ne demektir?", "answer": "İki veya daha fazla atomun birleşmesiyle oluşan yapı." },
+      { "id": 4, "question": "Asit nedir?", "answer": "Suda H+ iyonu veren maddeler." },
+      { "id": 5, "question": "Baz nedir?", "answer": "Suda OH- iyonu veren maddeler." },
+      { "id": 6, "question": "Kimyasal bağ nedir?", "answer": "Atomları bir arada tutan kuvvet." },
+      { "id": 7, "question": "pH neyi ölçer?", "answer": "Bir çözeltinin asitlik veya bazlık derecesi." },
+      { "id": 8, "question": "İyon nedir?", "answer": "Elektrik yükü taşıyan atom veya atom grubu." },
+      { "id": 9, "question": "Katalizör nedir?", "answer": "Tepkime hızını artıran madde." },
+      { "id": 10, "question": "Element nedir?", "answer": "Aynı tür atomlardan oluşan saf madde." }
+    ],
+    "keywords": [
+      {
+        "id": 1,
+        "question": "Atomun yapısı nasıldır?",
+        "options": ["Çekirdek ve elektronlar", "Sadece elektronlar", "Sadece protonlar", "Nötronlar"],
+        "answer": "Çekirdek ve elektronlar"
+      },
+      {
+        "id": 2,
+        "question": "Asitler ne tür iyon verir?",
+        "options": ["H+", "OH-", "Na+", "Cl-"],
+        "answer": "H+"
+      },
+      {
+        "id": 3,
+        "question": "Bazlar ne tür iyon verir?",
+        "options": ["OH-", "H+", "Na+", "Cl-"],
+        "answer": "OH-"
+      },
+      {
+        "id": 4,
+        "question": "Periyodik tablo nedir?",
+        "options": ["Elementlerin tablosu", "Atomların tablosu", "Moleküllerin tablosu", "İyonların tablosu"],
+        "answer": "Elementlerin tablosu"
+      },
+      {
+        "id": 5,
+        "question": "pH neyi ölçer?",
+        "options": ["Asitlik/bazlık", "Sıcaklık", "Basınç", "Hacim"],
+        "answer": "Asitlik/bazlık"
+      },
+      {
+        "id": 6,
+        "question": "Katalizör ne yapar?",
+        "options": ["Tepkime hızını artırır", "Tepkimeyi durdurur", "Enerji verir", "Isı verir"],
+        "answer": "Tepkime hızını artırır"
+      },
+      {
+        "id": 7,
+        "question": "İyon nedir?",
+        "options": ["Yüklü atom veya grup", "Nötr atom", "Molekül", "Element"],
+        "answer": "Yüklü atom veya grup"
+      },
+      {
+        "id": 8,
+        "question": "Kimyasal bağ nedir?",
+        "options": ["Atomları bağlayan kuvvet", "Elektronlar", "Protonlar", "Nötronlar"],
+        "answer": "Atomları bağlayan kuvvet"
+      },
+      {
+        "id": 9,
+        "question": "Molekül nedir?",
+        "options": ["İki ya da daha fazla atom birleşimi", "Tek atom", "Yüklü atom", "Element"],
+        "answer": "İki ya da daha fazla atom birleşimi"
+      },
+      {
+        "id": 10,
+        "question": "Element nedir?",
+        "options": ["Aynı tür atomlardan oluşan madde", "Farklı atomlar", "Molekül", "İyon"],
+        "answer": "Aynı tür atomlardan oluşan madde"
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "Atom nedir?",
+        "options": ["Maddenin en küçük yapı taşı", "Maddenin en büyük yapı taşı", "Sıvı", "Gaz"],
+        "answer": "Maddenin en küçük yapı taşı"
+      },
+      {
+        "id": 2,
+        "question": "Asitler ne tür iyon verir?",
+        "options": ["H+", "OH-", "Na+", "Cl-"],
+        "answer": "H+"
+      },
+      {
+        "id": 3,
+        "question": "Bazlar ne tür iyon verir?",
+        "options": ["OH-", "H+", "Na+", "Cl-"],
+        "answer": "OH-"
+      },
+      {
+        "id": 4,
+        "question": "Periyodik tablo nedir?",
+        "options": ["Elementlerin tablosu", "Atomların tablosu", "Moleküllerin tablosu", "İyonların tablosu"],
+        "answer": "Elementlerin tablosu"
+      },
+      {
+        "id": 5,
+        "question": "pH neyi ölçer?",
+        "options": ["Asitlik/bazlık", "Sıcaklık", "Basınç", "Hacim"],
+        "answer": "Asitlik/bazlık"
+      },
+      {
+        "id": 6,
+        "question": "Katalizör ne yapar?",
+        "options": ["Tepkime hızını artırır", "Tepkimeyi durdurur", "Enerji verir", "Isı verir"],
+        "answer": "Tepkime hızını artırır"
+      },
+      {
+        "id": 7,
+        "question": "İyon nedir?",
+        "options": ["Yüklü atom veya grup", "Nötr atom", "Molekül", "Element"],
+        "answer": "Yüklü atom veya grup"
+      },
+      {
+        "id": 8,
+        "question": "Kimyasal bağ nedir?",
+        "options": ["Atomları bağlayan kuvvet", "Elektronlar", "Protonlar", "Nötronlar"],
+        "answer": "Atomları bağlayan kuvvet"
+      },
+      {
+        "id": 9,
+        "question": "Molekül nedir?",
+        "options": ["İki ya da daha fazla atom birleşimi", "Tek atom", "Yüklü atom", "Element"],
+        "answer": "İki ya da daha fazla atom birleşimi"
+      },
+      {
+        "id": 10,
+        "question": "Element nedir?",
+        "options": ["Aynı tür atomlardan oluşan madde", "Farklı atomlar", "Molekül", "İyon"],
+        "answer": "Aynı tür atomlardan oluşan madde"
+      }
+    ]
+  },
+
+  "biyoloji": {
+    "flashcards": [
+      { "id": 1, "question": "Hücre nedir?", "answer": "Canlıların yapı ve fonksiyon birimi." },
+      { "id": 2, "question": "DNA ne işe yarar?", "answer": "Genetik bilgiyi taşır." },
+      { "id": 3, "question": "Mitokondri görevi nedir?", "answer": "Hücrede enerji üretir." },
+      { "id": 4, "question": "Fotosentez nedir?", "answer": "Bitkilerin ışık enerjisi ile besin üretmesi." },
+      { "id": 5, "question": "Kromozom nedir?", "answer": "DNA ve proteinlerin oluşturduğu yapı." },
+      { "id": 6, "question": "Enzim nedir?", "answer": "Kimyasal reaksiyonları hızlandıran protein." },
+      { "id": 7, "question": "Protein ne işe yarar?", "answer": "Hücre yapısında görev alır." },
+      { "id": 8, "question": "RNA ne işe yarar?", "answer": "Protein sentezinde rol oynar." },
+      { "id": 9, "question": "Hücre zarı görevi nedir?", "answer": "Madde geçişini kontrol eder." },
+      { "id": 10, "question": "Mutasyon nedir?", "answer": "DNA’da meydana gelen değişiklik." }
+    ],
+    "keywords": [
+      {
+        "id": 1,
+        "question": "Hücre nedir?",
+        "options": ["Canlının yapı birimi", "Organ", "Doku", "Molekül"],
+        "answer": "Canlının yapı birimi"
+      },
+      {
+        "id": 2,
+        "question": "DNA ne işe yarar?",
+        "options": ["Genetik bilgi taşır", "Enerji üretir", "Besin yapar", "Hareket sağlar"],
+        "answer": "Genetik bilgi taşır"
+      },
+      {
+        "id": 3,
+        "question": "Mitokondri görevi nedir?",
+        "options": ["Enerji üretir", "Genetik bilgi taşır", "Protein yapar", "Hücre zarıdır"],
+        "answer": "Enerji üretir"
+      },
+      {
+        "id": 4,
+        "question": "Fotosentez nedir?",
+        "options": ["Işık enerjisi ile besin üretir", "Oksijen tüketir", "Enerji üretir", "Suyu emer"],
+        "answer": "Işık enerjisi ile besin üretir"
+      },
+      {
+        "id": 5,
+        "question": "Kromozom nedir?",
+        "options": ["DNA ve protein", "Enzim", "Hücre zarı", "Molekül"],
+        "answer": "DNA ve protein"
+      },
+      {
+        "id": 6,
+        "question": "Enzim nedir?",
+        "options": ["Kimyasal reaksiyonları hızlandırır", "Protein yapar", "Enerji üretir", "Genetik bilgidir"],
+        "answer": "Kimyasal reaksiyonları hızlandırır"
+      },
+      {
+        "id": 7,
+        "question": "Protein ne işe yarar?",
+        "options": ["Hücre yapısı", "Enerji üretir", "Genetik bilgi", "Sinyal iletir"],
+        "answer": "Hücre yapısı"
+      },
+      {
+        "id": 8,
+        "question": "RNA ne işe yarar?",
+        "options": ["Protein sentezi", "Enerji üretir", "Genetik bilgi", "Besin yapar"],
+        "answer": "Protein sentezi"
+      },
+      {
+        "id": 9,
+        "question": "Hücre zarı görevi nedir?",
+        "options": ["Madde geçişi kontrolü", "Enerji üretimi", "Genetik bilgi", "Besin yapımı"],
+        "answer": "Madde geçişi kontrolü"
+      },
+      {
+        "id": 10,
+        "question": "Mutasyon nedir?",
+        "options": ["DNA değişikliği", "Enerji kaybı", "Hücre ölümü", "Protein sentezi"],
+        "answer": "DNA değişikliği"
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "Hücre nedir?",
+        "options": ["Canlının yapı birimi", "Organ", "Doku", "Molekül"],
+        "answer": "Canlının yapı birimi"
+      },
+      {
+        "id": 2,
+        "question": "DNA ne işe yarar?",
+        "options": ["Genetik bilgi taşır", "Enerji üretir", "Besin yapar", "Hareket sağlar"],
+        "answer": "Genetik bilgi taşır"
+      },
+      {
+        "id": 3,
+        "question": "Mitokondri görevi nedir?",
+        "options": ["Enerji üretir", "Genetik bilgi taşır", "Protein yapar", "Hücre zarıdır"],
+        "answer": "Enerji üretir"
+      },
+      {
+        "id": 4,
+        "question": "Fotosentez nedir?",
+        "options": ["Işık enerjisi ile besin üretir", "Oksijen tüketir", "Enerji üretir", "Suyu emer"],
+        "answer": "Işık enerjisi ile besin üretir"
+      },
+      {
+        "id": 5,
+        "question": "Kromozom nedir?",
+        "options": ["DNA ve protein", "Enzim", "Hücre zarı", "Molekül"],
+        "answer": "DNA ve protein"
+      },
+      {
+        "id": 6,
+        "question": "Enzim nedir?",
+        "options": ["Kimyasal reaksiyonları hızlandırır", "Protein yapar", "Enerji üretir", "Genetik bilgidir"],
+        "answer": "Kimyasal reaksiyonları hızlandırır"
+      },
+      {
+        "id": 7,
+        "question": "Protein ne işe yarar?",
+        "options": ["Hücre yapısı", "Enerji üretir", "Genetik bilgi", "Sinyal iletir"],
+        "answer": "Hücre yapısı"
+      },
+      {
+        "id": 8,
+        "question": "RNA ne işe yarar?",
+        "options": ["Protein sentezi", "Enerji üretir", "Genetik bilgi", "Besin yapar"],
+        "answer": "Protein sentezi"
+      },
+      {
+        "id": 9,
+        "question": "Hücre zarı görevi nedir?",
+        "options": ["Madde geçişi kontrolü", "Enerji üretimi", "Genetik bilgi", "Besin yapımı"],
+        "answer": "Madde geçişi kontrolü"
+      },
+      {
+        "id": 10,
+        "question": "Mutasyon nedir?",
+        "options": ["DNA değişikliği", "Enerji kaybı", "Hücre ölümü", "Protein sentezi"],
+        "answer": "DNA değişikliği"
+      }
+    ]
+  },
+
+  "tarih": {
+    "flashcards": [
+      { "id": 1, "question": "Osmanlı Devleti ne zaman kuruldu?", "answer": "1299 yılında." },
+      { "id": 2, "question": "İstanbul’un Fethi hangi yılda gerçekleşti?", "answer": "1453 yılında." },
+      { "id": 3, "question": "Atatürk’ün doğum yılı?", "answer": "1881." },
+      { "id": 4, "question": "Cumhuriyet ne zaman ilan edildi?", "answer": "1923 yılında." },
+      { "id": 5, "question": "Birinci Dünya Savaşı ne zaman başladı?", "answer": "1914 yılında." },
+      { "id": 6, "question": "Sanayi Devrimi nedir?", "answer": "Makinelerin yaygınlaşması ile üretimde büyük değişim." },
+      { "id": 7, "question": "Türk Kurtuluş Savaşı ne zaman başladı?", "answer": "1919 yılında." },
+      { "id": 8, "question": "Soğuk Savaş dönemi hangi yıllar arasındadır?", "answer": "1947-1991 yılları arasında." },
+      { "id": 9, "question": "Meşrutiyet nedir?", "answer": "Monarşinin sınırlandığı yönetim şekli." },
+      { "id": 10, "question": "Magna Carta ne zaman imzalandı?", "answer": "1215 yılında." }
+    ],
+    "keywords": [
+      {
+        "id": 1,
+        "question": "Osmanlı Devleti ne zaman kuruldu?",
+        "options": ["1299", "1453", "1923", "1914"],
+        "answer": "1299"
+      },
+      {
+        "id": 2,
+        "question": "İstanbul’un Fethi hangi yıl?",
+        "options": ["1453", "1299", "1923", "1914"],
+        "answer": "1453"
+      },
+      {
+        "id": 3,
+        "question": "Atatürk’ün doğum yılı nedir?",
+        "options": ["1881", "1453", "1923", "1914"],
+        "answer": "1881"
+      },
+      {
+        "id": 4,
+        "question": "Cumhuriyet ne zaman ilan edildi?",
+        "options": ["1923", "1299", "1453", "1914"],
+        "answer": "1923"
+      },
+      {
+        "id": 5,
+        "question": "Birinci Dünya Savaşı ne zaman başladı?",
+        "options": ["1914", "1299", "1453", "1923"],
+        "answer": "1914"
+      },
+      {
+        "id": 6,
+        "question": "Sanayi Devrimi nedir?",
+        "options": [
+          "Makinelerin yaygınlaşması",
+          "Savaş",
+          "Ekonomi",
+          "Politika"
+        ],
+        "answer": "Makinelerin yaygınlaşması"
+      },
+      {
+        "id": 7,
+        "question": "Türk Kurtuluş Savaşı ne zaman başladı?",
+        "options": ["1919", "1914", "1923", "1453"],
+        "answer": "1919"
+      },
+      {
+        "id": 8,
+        "question": "Soğuk Savaş dönemi hangi yıllar arasındadır?",
+        "options": ["1947-1991", "1914-1918", "1923-1938", "1960-1980"],
+        "answer": "1947-1991"
+      },
+      {
+        "id": 9,
+        "question": "Meşrutiyet nedir?",
+        "options": [
+          "Monarşinin sınırlandığı yönetim şekli",
+          "Demokrasi",
+          "Cumhuriyet",
+          "Monarşi"
+        ],
+        "answer": "Monarşinin sınırlandığı yönetim şekli"
+      },
+      {
+        "id": 10,
+        "question": "Magna Carta ne zaman imzalandı?",
+        "options": ["1215", "1066", "1492", "1776"],
+        "answer": "1215"
+      }
+    ],
+    "quiz": [
+      {
+        "id": 1,
+        "question": "Osmanlı Devleti ne zaman kuruldu?",
+        "options": ["1299", "1453", "1923", "1914"],
+        "answer": "1299"
+      },
+      {
+        "id": 2,
+        "question": "İstanbul’un Fethi hangi yıl?",
+        "options": ["1453", "1299", "1923", "1914"],
+        "answer": "1453"
+      },
+      {
+        "id": 3,
+        "question": "Atatürk’ün doğum yılı nedir?",
+        "options": ["1881", "1453", "1923", "1914"],
+        "answer": "1881"
+      },
+      {
+        "id": 4,
+        "question": "Cumhuriyet ne zaman ilan edildi?",
+        "options": ["1923", "1299", "1453", "1914"],
+        "answer": "1923"
+      },
+      {
+        "id": 5,
+        "question": "Birinci Dünya Savaşı ne zaman başladı?",
+        "options": ["1914", "1299", "1453", "1923"],
+        "answer": "1914"
+      },
+      {
+        "id": 6,
+        "question": "Sanayi Devrimi nedir?",
+        "options": [
+          "Makinelerin yaygınlaşması",
+          "Savaş",
+          "Ekonomi",
+          "Politika"
+        ],
+        "answer": "Makinelerin yaygınlaşması"
+      },
+      {
+        "id": 7,
+        "question": "Türk Kurtuluş Savaşı ne zaman başladı?",
+        "options": ["1919", "1914", "1923", "1453"],
+        "answer": "1919"
+      },
+      {
+        "id": 8,
+        "question": "Soğuk Savaş dönemi hangi yıllar arasındadır?",
+        "options": ["1947-1991", "1914-1918", "1923-1938", "1960-1980"],
+        "answer": "1947-1991"
+      },
+      {
+        "id": 9,
+        "question": "Meşrutiyet nedir?",
+        "options": [
+          "Monarşinin sınırlandığı yönetim şekli",
+          "Demokrasi",
+          "Cumhuriyet",
+          "Monarşi"
+        ],
+        "answer": "Monarşinin sınırlandığı yönetim şekli"
+      },
+      {
+        "id": 10,
+        "question": "Magna Carta ne zaman imzalandı?",
+        "options": ["1215", "1066", "1492", "1776"],
+        "answer": "1215"
+      }
+    ]
+  }
+}
