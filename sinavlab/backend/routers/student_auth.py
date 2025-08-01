@@ -26,20 +26,3 @@ class StudentLoginRequest(BaseModel):
     password: str
 
 
-@router.post("/login")
-def student_login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    print("Form email:", form_data.username)
-    print("Form password:", form_data.password)
-
-    student = db.query(Student).filter(
-        Student.email == form_data.username,
-        Student.password == form_data.password
-    ).first()
-
-    print("Öğrenci bulundu mu?:", student)
-
-    if not student:
-        raise HTTPException(status_code=401, detail="Yanlış şifre veya mail!")
-
-    token = create_access_token(data={ "email": student.email, "id": str(student.id)})
-    return {"access_token": token, "token_type": "bearer"}

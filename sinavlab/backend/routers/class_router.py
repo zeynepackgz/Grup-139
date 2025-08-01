@@ -84,9 +84,7 @@ async def update_class_name(
 async def delete_class(
     class_id: int,
     db: Session = Depends(get_db),
-    token: str = Depends(oauth2_scheme)
 ):
-    payload = decode_access_token(token)
 
     db_class = db.query(Class).filter(Class.id == class_id).first()
     if not db_class:
