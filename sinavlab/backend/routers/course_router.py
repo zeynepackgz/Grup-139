@@ -7,6 +7,14 @@ from databse.db_connection import get_db
 from models.course_model import Course
 from models.class_model import Class
 from pydantic import BaseModel
+from fastapi.security import OAuth2PasswordBearer
+
+# Import decode_access_token from its module
+from auth import decode_access_token  
+
+
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 router = APIRouter(
     prefix='/courses',
@@ -15,7 +23,15 @@ router = APIRouter(
 
 
 @router.post("/", response_model=CourseCreate)
-def create_course(course: CourseCreate, db: Session = Depends(get_db)):
+def create_course(
+    course: CourseCreate, 
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
+):
+    payload = decode_access_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Invalid or missing token.")
+    
     existing = db.query(Course).filter(Course.name == course.name).first()
     if existing:
         raise HTTPException(status_code=400, detail="Course with this name already exists")

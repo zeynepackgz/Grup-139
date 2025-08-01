@@ -79,11 +79,15 @@ async def update_class_name(
         "class_id": db_class.id,
         "new_class_name": db_class.name
     }
+
 @router.delete("/{class_id}", status_code=status.HTTP_200_OK)
 async def delete_class(
     class_id: int,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
 ):
+    payload = decode_access_token(token)
+
     db_class = db.query(Class).filter(Class.id == class_id).first()
     if not db_class:
         raise HTTPException(status_code=404, detail="Class not found")
@@ -114,12 +118,21 @@ def get_student_class(
         "class_name": class_info.name
     }
 
-@router.get("/{class_id}/courses")
-def get_courses_for_class(class_id: int, db: Session = Depends(get_db)):
-    class_obj = db.query(Class).filter(Class.id == class_id).first()
-    if not class_obj:
-        raise HTTPException(status_code=404, detail="Class not found")
 
+
+
+@router.get("/my-class/courses")
+def get_my_class_courses(
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
+):
+    payload = decode_access_token(token)
+    student_id = payload.get("id")
+    student = db.query(Student).filter(Student.id == student_id).first()
+    if not student or not student.class_info:
+        raise HTTPException(status_code=404, detail="Student or class not found")
+
+    class_obj = student.class_info
     return {
         "class_id": class_obj.id,
         "class_name": class_obj.name,
@@ -128,23 +141,28 @@ def get_courses_for_class(class_id: int, db: Session = Depends(get_db)):
             for c in class_obj.courses
         ]
     }
-@router.get("/{class_id}/students")
-def get_students_in_class(class_id: int, db: Session = Depends(get_db)):
-    class_obj = db.query(Class).filter(Class.id == class_id).first()
-    
-    if not class_obj:
-        raise HTTPException(status_code=404, detail="Class not found")
+@router.get("/my-class/students")
+def get_my_class_students(
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
+):
+    payload = decode_access_token(token)
+    student_id = payload.get("id")
+    student = db.query(Student).filter(Student.id == student_id).first()
+    if not student or not student.class_info:
+        raise HTTPException(status_code=404, detail="Student or class not found")
 
+    class_obj = student.class_info
     return {
         "class_id": class_obj.id,
         "class_name": class_obj.name,
         "students": [
             {
-                "id": student.id,
-                "first_name": student.first_name,
-                "last_name": student.last_name,
-                "email": student.email
+                "id": s.id,
+                "first_name": s.first_name,
+                "last_name": s.last_name,
+                "email": s.email
             }
-            for student in class_obj.students
+            for s in class_obj.students
         ]
     }

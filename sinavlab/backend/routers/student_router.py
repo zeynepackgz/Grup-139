@@ -5,6 +5,10 @@ from models.student_model import Student
 from models.class_model import Class
 from schemas.student_schema import StudentCreate, StudentUpdate
 from databse.db_connection import get_db
+from fastapi.security import OAuth2PasswordBearer
+from auth import decode_access_token  
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 router = APIRouter(
     prefix="/students",
@@ -50,9 +54,13 @@ async def add_student(student_data: StudentCreate, db: Session = Depends(get_db)
         "class_name": db_class.name
     }
 
-@router.delete("/{student_id}", status_code=status.HTTP_200_OK)
-async def delete_student_by_id(student_id: int, db: Session = Depends(get_db)):
-    db_student = db.query(Student).filter(Student.id == student_id).first()
+@router.delete("/me", status_code=status.HTTP_200_OK)
+async def delete_myself(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+    payload = decode_access_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Geçersiz veya eksik token.")
+
+    db_student = db.query(Student).filter(Student.id == payload["sub"]).first()
 
     if not db_student:
         raise HTTPException(status_code=404, detail="Student not found")
@@ -60,7 +68,7 @@ async def delete_student_by_id(student_id: int, db: Session = Depends(get_db)):
     db.delete(db_student)
     db.commit()
 
-    return {"message": f"Student with ID {student_id} deleted successfully"}
+    return {"message": f"Student deleted successfully"}
 
 @router.put("/{student_id}", status_code=status.HTTP_200_OK)
 async def update_student_by_id(student_id: int, student_data: StudentUpdate, db: Session = Depends(get_db)):
@@ -101,30 +109,6 @@ async def update_student_by_id(student_id: int, student_data: StudentUpdate, db:
         "message": "Student updated successfully",
         "student_id": db_student.id
     }
-@router.get("/", status_code=status.HTTP_200_OK)
-async def get_all_students(db: Session = Depends(get_db)):
-    students = db.query(Student).all()
-
-    if not students:
-        return {"message": "No students found"}
-
-    result = []
-    for student in students:
-        result.append({
-            "student_id": student.id,
-            "student_number": student.student_number,
-            "first_name": student.first_name,
-            "last_name": student.last_name,
-            "gender": student.gender,
-            "date_of_birth": student.date_of_birth,
-            "address": student.address,
-            "phone_number": student.phone_number,
-            "email": student.email,
-            "class_id": student.class_id,
-            "class_name": student.class_info.name if student.class_info else None
-        })
-
-    return {"students": result}
 
 @router.get("/{student_id}/courses")
 def get_courses_from_student(
@@ -148,5 +132,50 @@ def get_courses_from_student(
             }
             for course in class_courses
         ]
+    }
+
+@router.put("/me", status_code=status.HTTP_200_OK)
+async def update_myself(
+    student_data: StudentUpdate,
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme)
+):
+    payload = decode_access_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Geçersiz veya eksik token.")
+    student_id = payload.get("id")
+    db_student = db.query(Student).filter(Student.id == student_id).first()
+    if not db_student:
+        raise HTTPException(status_code=404, detail="Student not found")
+
+    if student_data.class_name:
+        db_class = db.query(Class).filter(Class.name == student_data.class_name).first()
+        if not db_class:
+            raise HTTPException(status_code=404, detail="New class not found")
+        db_student.class_id = db_class.id
+    if student_data.email is not None:
+        existing_student = db.query(Student).filter(Student.email == student_data.email, Student.id != student_id).first()
+        if existing_student:
+            raise HTTPException(status_code=400, detail="Email already in use by another student")
+        db_student.email = student_data.email
+    if student_data.first_name is not None:
+        db_student.first_name = student_data.first_name
+    if student_data.last_name is not None:
+        db_student.last_name = student_data.last_name
+    if student_data.gender is not None:
+        db_student.gender = student_data.gender
+    if student_data.date_of_birth is not None:
+        db_student.date_of_birth = student_data.date_of_birth
+    if student_data.address is not None:
+        db_student.address = student_data.address
+    if student_data.phone_number is not None:
+        db_student.phone_number = student_data.phone_number
+
+    db.commit()
+    db.refresh(db_student)
+
+    return {
+        "message": "Student updated successfully",
+        "student_id": db_student.id
     }
 
