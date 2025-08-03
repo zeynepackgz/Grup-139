@@ -150,6 +150,12 @@ Toplam 5 modülden 1., 2. ve 4. modüller başarıyla ana projeye bağlandı.
 ![ürün2](readme/urun2.png)
 ![ürün3](readme/urun3.png)
 ![ürün4](readme/urun4.png)
+![ürün5](readme/urun5.png)
+![ürün6](readme/urun6.png)
+![ürün7](readme/urun7.png)
+![ürün8](readme/urun8.png)
+
+---
 
 ### Sprint Review
 
