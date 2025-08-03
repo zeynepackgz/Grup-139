@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Takım ismi 
 SınavLab - Yapay Zekâ Destekli Kişiselleştirilmiş Sınav ve Öğrenme Platformu
 
@@ -111,22 +110,82 @@ Sprint 2 sonunda proje canlıya taşınmış, ilk çalışan sürüm elde edilmi
 - Sprint sonunda proje ilk kez **canlı ortama taşınmış** ve çalışan bir prototip elde edilmiştir.  
 - Ekip görevlerini zamanında ve etkili bir şekilde yerine getirmiştir.  
 - Sprint 3 için hedef: kullanıcı testlerini tamamlayarak arayüz ve deneyim geliştirmelerine odaklanmaktır.
-=======
-# SınavLab – Kavram Haritası Modülü
 
-Bu modül, sınavlarda düşük başarı gösterilen derslere göre otomatik olarak kavram haritası üretir.  
-Ayrıca her kavram için podcast oynatıcı ve hikayeleştirilmiş içerik sunar.
 
-## Kullanılan Teknolojiler
+## SPRINT 3
 
-- React.js
-- HTML5 `<audio>` oynatıcı
-- JSON mock veri (backend entegrasyonu hazır)
-- Vite / Create React App (Bu projede CRA kullanıldı)
+### 📌 Sprint-3 Notları  
+Sprint 3'te odak noktası, her ekip üyesinin kendi modülünü tamamlaması ve tüm modüllerin proje içinde entegre edilmesiydi.  
+Toplam 5 modülden 1., 2. ve 4. modüller başarıyla ana projeye bağlandı.  
+3. ve 5. modüller teknik olarak tamamlandı; ancak ana projeye entegrasyonları Sprint sonuna kadar gerçekleştirilemedi.
 
-## Geliştirme
+---
 
-```bash
-npm install
-npm start
->>>>>>> kavram-haritasi
+### 🎯 Tahmin Edilen Puan ve Tamamlanan Puan  
+- **Sprint 3 Tahmin Edilen Puan:** 100  
+- **Sprint 3 Tamamlanan Puan:** 80  
+  > 1, 2 ve 4. modüller başarıyla entegre edildiği için puanlandı.  
+  > 3 ve 5. modüller teknik olarak tamamlandı, ancak entegrasyon yapılmadığı için puanlandırmaya dahil edilmedi.
+
+---
+
+### 📊 Puan Tamamlama Mantığı  
+- Her bir modül yaklaşık 20 puan üzerinden değerlendirildi.  
+- Entegrasyonu tamamlanan modüller **tam puan** aldı.  
+- Sadece bireysel olarak geliştirilen fakat proje ile birleştirilmeyen modüller, Sprint 3 içinde “tamamlanmış” olarak sayılmadı.  
+- Bu durum puanlamada 20 puanlık bir eksikliğe neden oldu.
+
+---
+
+
+### 🛠 Backlog Durumu ve İşlerin İlerlemesi
+
+![sprint3](readme/sprint3.png)
+
+---
+
+### Ürün Screenshot
+
+![ürün1](readme/urun1.png)
+![ürün2](readme/urun2.png)
+![ürün3](readme/urun3.png)
+![ürün4](readme/urun4.png)
+
+### Sprint Review
+
+Sprint 3 sonunda, ekip üyeleri tarafından tamamlanan modüller incelenmiş ve entegrasyon durumu değerlendirilmiştir.  
+Toplamda 5 modülden 3’ü başarıyla ana projeye entegre edilmiştir:
+
+-  **1. Sınav Modülü**
+-  **2. Not Takibi ve Ortalama Hesaplama**
+-  **4. Bilgi Kartları & Anahtar Kelime Testi**
+
+Diğer 2 modül ise bireysel olarak tamamlanmış olsa da ana proje yapısına entegre edilememiştir:
+
+-  **3. Yapay Zeka Destekli Performans Analizi**
+-  **5. Kavram Haritası**
+
+Geliştiriciler modüllerini teknik olarak başarıyla geliştirmiştir. Ancak entegrasyon adımlarında zaman yönetimi, koordinasyon veya teknik uyumsuzluklar nedeniyle eksiklik yaşanmıştır.
+
+🎯 **Genel değerlendirme:**  
+Sprint 3, proje bütünlüğü açısından büyük bir ilerleme sağlamış, ancak entegrasyonu tamamlanmayan kısımlar nedeniyle hedeflenen %100 başarıya ulaşılamamıştır.  
+Proje genel hatlarıyla sunuma hazır hale gelmiş; eksik modüller bir sonraki sprintte veya proje sonrası kısa bir sprintle entegre edilebilir.
+
+---
+
+### Sprint Retrospective
+
+Sprint 3 sonunda ekip, süreçle ilgili aşağıdaki değerlendirmeleri yapmıştır:
+
+#### ✅ İyi Gidenler:
+- Ekip üyeleri bireysel olarak modüllerini zamanında tamamladı.  
+- Scrum toplantıları verimli geçti ve ekip içinde iletişim güçlüydü.  
+- Entegre edilen modüller sorunsuz çalıştı ve genel sistemle uyumlu hale getirildi.
+
+#### ⚠️ İyileştirme Gerektirenler:
+- Modül entegrasyonu sürecinde yeterli zaman ve teknik destek sağlanamadı.  
+- Kodların ortak bir yapıya uygun geliştirilmemesi, entegrasyon zorluklarına yol açtı.  
+- Son günlerde yoğunlaşan entegrasyon süreci, iş yükünü artırdı ve eksik teslimlere neden oldu.
+
+#### 🛠 Alınacak Aksiyonlar:
+- Gelecek projelerde entegrasyon süreci için **ayrı bir zaman bloğu** ayrılması kararlaştırıldı.  
